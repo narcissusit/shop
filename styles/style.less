@@ -4,6 +4,8 @@
 @grey-color: #eaeaea;
 @shop-color: #f0975c;
 @orange-color: #feab12;
+@footer-color: #141414;
+@footer-grey: #484848;
 
 @font-face {
   font-family: 'PlayfairDisplay-Italic';
@@ -233,6 +235,10 @@ header{
 }
 
 main{
+	padding-bottom: 95px;
+}
+
+main, footer{
 	position: relative;
 	top: 70px;
 }
@@ -531,6 +537,104 @@ main{
 	height: 100%;
 }
 
+footer{
+	background-color: @footer-color;
+}
+
+.main_footer_info{
+	padding: 72px 0;
+	h3{
+		font-family: @lato-b;
+		font-size: 16px;
+		text-transform: uppercase;
+		a{
+			color: #fff;
+			text-decoration: none;
+		}
+		span{
+			font-family: @play-font;
+			text-transform: lowercase;
+		}
+		margin-bottom: 20px;
+	}
+}
+
+.content_foot{
+	display: none;
+}
+
+.networks_foot{
+	display: flex;
+	a{
+		margin-right: 15px;
+		text-decoration: none;
+		width: 40px;
+		height: 40px;
+		color: #000;
+		background-color: #fff;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	margin-bottom: 20px;
+}
+
+.mail_form{
+	margin: 10px 0;
+	border: 1px solid @footer-grey;
+	padding: 5px;
+	position: relative;
+	max-width: 365px;
+	height: 40px;
+	input{
+		width: 250px;
+		height: 30px;
+		background-color: transparent;
+		border: none;
+		padding-left: 10px;
+		outline: none;
+		color: #fff;
+		&::placeholder{
+			color: @footer-grey;
+			font-family: @lato-r;
+			font-size: 12px;
+		}
+	}
+	.subscribe{
+		width: 100px;
+		height: 30px;
+		position: absolute;
+		right: 5px;
+		color: #fff;
+		font-family: @lato-r;
+		font-size: 12px;
+		background-color: @footer-grey;
+		text-transform: uppercase;
+		border: none;
+		cursor: pointer;
+		outline: none;
+	}
+}
+
+.footer_rights{
+	p, p a{
+		color: #2d2d2d;
+		font-size: 12px;
+		font-family: @lato-r;
+		text-decoration: none;
+	}
+	padding-bottom: 72px;
+}
+
+.partners{
+	padding: 10px 0;
+	a{
+		color: @footer-color;
+		background-color: @footer-grey;
+	}
+}
+
 .to_top{
 	display: none;
 }
@@ -788,7 +892,7 @@ main{
 		margin-top: 20px;
 	}
 
-	main{
+	main, footer{
 		top: 164px;
 	}
 
@@ -893,7 +997,39 @@ main{
 			text-decoration: none;
 			color: #fff;
 		}
-}
+	}
+
+	footer{
+		.main_footer_info{
+			display: flex;
+		}
+		.footer_content{
+			margin-right: 50px;
+			h3{
+				padding-bottom: 50px;
+			}
+		}
+
+		.subscribe_title{
+			padding: 45px 0;
+		}
+
+		.content_foot{
+			display: block;
+			ul{
+				list-style: none;
+				li{
+					margin-bottom: 15px;
+					a{
+						text-decoration: none;
+						color: @footer-grey;
+						font-family: @lato-r;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
 
 }
 
@@ -912,6 +1048,10 @@ main{
 		}
 	}
 
+	.fade::after{
+		display: none;
+	}
+
 	.slide_content{
 		top: 50px;
 	}
@@ -922,6 +1062,12 @@ main{
 
 	.slide_labels{
 		bottom: 20px;
+	}
+
+	footer{
+		.footer_content{
+			margin-right: 130px;
+		}
 	}
 }
 
